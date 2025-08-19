@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de HTML - Aula 02</title>
+  </head>
+  <body>
+    <header>
+      <h1>Bem-vindo ao Exemplo de HTML</h1>
+    </header>
+    <nav>
+      <div>
+        Links principais
+        <ul>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#imagens">Imagens</a></li>
+        <li><a href="#descricoes">Descrições</a></li>
+        <li><a href="#tabela">Tabela</a></li>
+        <li><a href="#listas">Listas</a></li>
+      </ul>
+      </div>
+      <div>
+        Links secundários
+        <ul>
+            <Li>teste</Li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+        <section>
+            <div class="textoPrincipal">
+                Teste
+                <p>Conteúdo adicional.</p>
+                <div>
+                    <article>
+                        Links referencias
+                    </article>
+                </div>
+            </div>
+
+            <div>
+                <article>
+                    <h2>Título do Artigo</h2>
+                    <p>Conteúdo do artigo.</p>
+                </article>
+                <article>
+                    <h2>Título do Artigo</h2>
+                    <p>Conteúdo do artigo.</p>
+                </article>
+                <article>
+                    <h2>Título do Artigo</h2>
+                    <p>Conteúdo do artigo.</p>
+                </article>
+            </div>
+        </section>
+
+      <div id="links">
+        <h1>Links</h1>
+        <a href="https://www.google.com.br" target="_blank">Clique aqui!</a>
+      </div>
+
+      <div id="imagens">
+        <h1>Imagens</h1>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/300px-Google_Images_2015_logo.svg.png"
+        />
+      </div>
+
+      <div id="descricoes">
+        <h1>Figure</h1>
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/300px-Google_Images_2015_logo.svg.png"
+          />
+          <figcaption>Logo do Google Imagens</figcaption>
+        </figure>
+      </div>
+
+      <div id="tabela">
+        <h1>Tabela</h1>
+        <table border="4">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Cidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>João</td>
+              <td>25</td>
+              <td>São Paulo</td>
+            </tr>
+            <tr>
+              <td>Maria</td>
+              <td>30</td>
+              <td>Rio de Janeiro</td>
+            </tr>
+            <tr>
+              <td>Pedro</td>
+              <td>22</td>
+              <td>Belo Horizonte</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Total de pessoas: 3</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div>
+        <h1>Listas não ordenada</h1>
+        <ul>
+          <li>
+            Item 1
+            <ol>
+              <li>Subitem 1</li>
+              <li>Subitem 2</li>
+              <li>Subitem 3</li>
+            </ol>
+          </li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+
+        <h1>Listas ordenada</h1>
+        <ol>
+          <li>
+            Item 1
+            <ol>
+              <li>Subitem 1</li>
+              <li>Subitem 2</li>
+              <li>Subitem 3</li>
+            </ol>
+          </li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ol>
+
+        <dl>
+          <dt>Bola</dt>
+          <dd>
+            <ul>
+              <li>Esporte</li>
+              <li>Brinquedo</li>
+              <li>Atividade física</li>
+            </ul>
+          </dd>
+          <dt>Violão</dt>
+          <dd>Instrumento musical de cordas</dd>
+          <dt>Casa</dt>
+          <dd>Habitação humana</dd>
+        </dl>
+      </div>
+
+      <div>
+        <h1>Formulário</h1>
+        <fieldset>
+          <legend>Cadastro de Usuário</legend>
+          <form action="#" method="post">
+            <p>Cadastro de Usuário</p>
+            <label>Nome<b>*:</b>
+              <input type="text" minlength="2" required/>
+            </label>
+
+            <label for="email"> E-mail: </label>
+            <input type="email" id="email" required/>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" />
+
+            <!-- Input do type radio -->
+            <p>Gênero:</p>
+            <label for="masculino">Masculino</label>
+            <input
+              type="radio"
+              id="masculino"
+              name="genero"
+              value="masculino"
+            />
+            <label for="feminino">Feminino</label>
+            <input type="radio" id="feminino" name="genero" value="feminino" />
+            <label for="outro">Outro</label>
+            <input type="radio" id="outro" name="genero" value="outro" />
+
+            <!-- Input do type checkbox -->
+            <p>Interesses:</p>
+            <label for="esporte">Esporte</label>
+            <input
+              type="checkbox"
+              id="esporte"
+              name="interesses"
+              value="esporte"
+            />
+            <label for="musica">Música</label>
+            <input
+              type="checkbox"
+              id="musica"
+              name="interesses"
+              value="musica"
+            />
+            <label for="arte">Arte</label>
+            <input type="checkbox" id="arte" name="interesses" value="arte" />
+
+            <!-- Type do tipo File-->
+            <br />
+            <br />
+            <label for="arquivo">Enviar Arquivo:</label>
+            <input type="file" id="arquivo" name="arquivo" />
+
+            <!-- Type Date-->
+            <br />
+            <br />
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" />
+
+            <!-- Type Url -->
+            <br />
+            <br />
+            <label for="website">Website:</label>
+            <input type="url" id="website" required name="website" />
+
+            <br />
+            <!-- Type Color -->
+            <label for="cor_favorita">Cor Favorita:</label>
+            <input
+              type="color"
+              id="cor_favorita"
+              name="cor_favorita"
+              value="#ff0000"
+            />
+            <br />
+            <!-- Type ranger-->
+            <input
+              type="range"
+              id="volume"
+              name="volume"
+              min="0"
+              max="100"
+              value="50"
+            />
+            <br />
+            <br />
+
+            <select>
+              <option value="opcao1">Opção 1</option>
+              <option value="opcao2">Opção 2</option>
+              <option value="opcao3">Opção 3</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" rows="4" cols="50"></textarea>
+            <br />
+            <br />
+            <!-- Type submit e reset -->
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Limpar" />
+
+            <button>Enviar Button!</button>
+
+          </form>
+        </fieldset>
+      </div>
+    </main>
+  </body>
+</html>
