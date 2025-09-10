@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página Temática – Beatles + Exercícios de HTML Semântico</title>
+</head>
+<body>
+  <header role="banner">
+    <div class="wrap">
+      <h1>Página Temática: The Beatles</h1>
+      <p id="topo">Exercícios de HTML semântico, acessibilidade, listas, imagens e tabelas.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Menu principal">
+    <div class="wrap">
+      <a href="#listas">Listas</a>
+      <a href="#imagens">Imagens</a>
+      <a href="#tabelas">Tabelas</a>
+      <a href="#beatles">Beatles</a>
+      <a href="#caminhos">Caminhos Relativos x Absolutos</a>
+      <a href="sobre.html">Sobre (link relativo)</a>
+      <a href="https://pt.wikipedia.org/wiki/The_Beatles" target="_blank" rel="noopener">Wikipedia dos Beatles (link absoluto)</a>
+    </div>
+  </nav>
+
+  <main id="conteudo">
+    <section id="listas" aria-labelledby="titulo-listas">
+      <div class="wrap">
+        <h2 id="titulo-listas">Listas</h2>
+
+        <article aria-labelledby="ul-title">
+          <h3 id="ul-title">a) Lista não ordenada (5 itens)</h3>
+          <ul>
+            <li>HTML semântico</li>
+            <li>Acessibilidade (<i>a11y</i>)</li>
+            <li>Boas práticas de conteúdo</li>
+            <li>Estruturas de navegação</li>
+            <li>Uso correto de <b>alt</b> em imagens</li>
+          </ul>
+        </article>
+
+        <article aria-labelledby="ol-title">
+          <h3 id="ol-title">b) Lista ordenada (5 passos)</h3>
+          <ol>
+            <li>Planejar a estrutura da página</li>
+            <li>Escrever o HTML com tags semânticas</li>
+            <li>Adicionar conteúdo acessível (alt, captions)</li>
+            <li>Montar tabelas com cabeçalhos e <code>caption</code></li>
+            <li>Revisar critérios e validar</li>
+          </ol>
+        </article>
+
+        <article aria-labelledby="dl-title">
+          <h3 id="dl-title">c) Lista de definição (3 termos)</h3>
+          <dl>
+            <dt>Semântica</dt>
+            <dd>Uso de tags que descrevem o propósito do conteúdo (ex.: <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>).</dd>
+            <dt>Acessibilidade</dt>
+            <dd>Práticas que tornam o conteúdo utilizável por todas as pessoas (ex.: textos alternativos significativos).</dd>
+            <dt>Âncora</dt>
+            <dd>Link interno que navega para um ponto específico da mesma página (ex.: <code>#listas</code>).</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section id="imagens" aria-labelledby="titulo-imagens">
+      <div class="wrap">
+        <h2 id="titulo-imagens">Imagens (acessibilidade + figure/figcaption)</h2>
+
+        <article>
+          <h3>Imagem com caminho <u>relativo</u></h3>
+          <figure>
+            <!-- Caminho relativo (ex.: arquivo dentro de /img do projeto) -->
+            <img src="img/beatles-studio.jpg" alt="Os Beatles gravando em estúdio, vistos atrás de microfones" width="600" />
+            <figcaption>Beatles em sessão de estúdio (caminho relativo: <code>img/beatles-studio.jpg</code>).</figcaption>
+          </figure>
+        </article>
+
+        <article>
+          <h3>Imagem com caminho <u>absoluto</u></h3>
+          <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/The_Fabs.JPG" alt="Os Beatles posando juntos durante a década de 1960" width="600" />
+            <figcaption>Foto histórica dos Beatles (caminho absoluto: URL completa da Wikimedia).</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section id="tabelas" aria-labelledby="titulo-tabelas">
+      <div class="wrap">
+        <h2 id="titulo-tabelas">Tabelas</h2>
+
+        <article aria-labelledby="titulo-educacao">
+          <h3 id="titulo-educacao">Tabela simples — Educação Profissional (Brasil x SC)</h3>
+          <table border="1" width="100%" cellpadding="8" cellspacing="0">
+            <caption>Educação Profissional: Matrículas e Novas Matrículas (2014)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Indicador</th>
+                <th scope="col">Brasil</th>
+                <th scope="col">Santa Catarina (SC)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Matrículas</th>
+                <td>1.741.528 (2014)</td>
+                <td>67.325 (2014)</td>
+              </tr>
+              <tr>
+                <th scope="row">Novas Matrículas</th>
+                <td>11,7% (2014)</td>
+                <td>3,1% (2014)</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article aria-labelledby="titulo-ideb" style="margin-top: 24px;">
+          <h3 id="titulo-ideb">Tabela avançada — IDEB (2013 / 2015 / 2017)</h3>
+          <table border="1" width="100%" cellpadding="8" cellspacing="0" aria-describedby="nota-ideb">
+            <caption>Índice de Desenvolvimento da Educação Básica (IDEB)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Etapa</th>
+                <th scope="col">Brasil 2013</th>
+                <th scope="col">Brasil 2015</th>
+                <th scope="col">Brasil 2017</th>
+                <th scope="col">SC 2013</th>
+                <th scope="col">SC 2015</th>
+                <th scope="col">SC 2017</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Anos iniciais</th>
+                <td>4,7</td>
+                <td>5,2</td>
+                <td>5,5</td>
+                <td>5,5</td>
+                <td>5,8</td>
+                <td>6,0</td>
+              </tr>
+              <tr>
+                <th scope="row">Anos finais</th>
+                <td>4,4</td>
+                <td>4,7</td>
+                <td>5,0</td>
+                <td>5,1</td>
+                <td>5,5</td>
+                <td>5,7</td>
+              </tr>
+              <tr>
+                <th scope="row">Ensino médio</th>
+                <td>3,9</td>
+                <td>4,3</td>
+                <td>4,7</td>
+                <td>4,4</td>
+                <td>4,7</td>
+                <td>5,2</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="nota-ideb" class="sr-only">Tabela com dados do IDEB para Brasil e Santa Catarina nos anos de 2013, 2015 e 2017.</p>
+        </article>
+
+        <article aria-labelledby="titulo-discografia" style="margin-top: 24px;">
+          <h3 id="titulo-discografia">Tabela com imagens — Discografia dos Beatles</h3>
+          <table border="1" width="100%" cellpadding="8" cellspacing="0">
+            <caption>Discografia selecionada dos Beatles (álbuns e capas)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Álbum</th>
+                <th scope="col">Ano</th>
+                <th scope="col">Capa (imagem)</th>
+                <th scope="col">Observações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Abbey Road</th>
+                <td>1969</td>
+                <td>
+                  <figure>
+                    <img src="img/albuns/abbey-road.jpg" alt="Capa de Abbey Road com os quatro Beatles atravessando a faixa de pedestres" width="140" />
+                    <figcaption>Abbey Road (relativo)</figcaption>
+                  </figure>
+                </td>
+                <td>Um dos álbuns mais icônicos; capa na faixa de pedestres.</td>
+              </tr>
+              <tr>
+                <th scope="row">Let It Be</th>
+                <td>1970</td>
+                <td>
+                  <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/2/25/LetItBe.jpg" alt="Capa do álbum Let It Be com mosaico dos quatro integrantes" width="140" />
+                    <figcaption>Let It Be (absoluto)</figcaption>
+                  </figure>
+                </td>
+                <td>Último álbum lançado pela banda.</td>
+              </tr>
+              <tr>
+                <th scope="row">Revolver</th>
+                <td>1966</td>
+                <td>
+                  <figure>
+                    <img src="img/albuns/revolver.jpg" alt="Capa de Revolver com colagem em preto e branco dos Beatles" width="140" />
+                    <figcaption>Revolver (relativo)</figcaption>
+                  </figure>
+                </td>
+                <td>Marco na experimentação sonora.</td>
+              </tr>
+              <tr>
+                <th scope="row">Sgt. Pepper's Lonely Hearts Club Band</th>
+                <td>1967</td>
+                <td>
+                  <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/6/67/Sgt._Pepper%27s_Lonely_Hearts_Club_Band.jpg" alt="Capa colorida de Sgt. Pepper's com a banda em uniformes e público ao fundo" width="140" />
+                    <figcaption>Sgt. Pepper's (absoluto)</figcaption>
+                  </figure>
+                </td>
+                <td>Considerado um dos melhores álbuns de todos os tempos.</td>
+              </tr>
+              <tr>
+                <th scope="row">Help!</th>
+                <td>1965</td>
+                <td>
+                  <figure>
+                    <img src="img/albuns/help.jpg" alt="Capa de Help! com os Beatles de azul sinalizando letras com os braços" width="140" />
+                    <figcaption>Help! (relativo)</figcaption>
+                  </figure>
+                </td>
+                <td>Inclui a faixa-título e “Yesterday”.</td>
+              </tr>
+              <tr>
+                <th scope="row">A Hard Day’s Night</th>
+                <td>1964</td>
+                <td>
+                  <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/6/6a/HardDayUK.jpg" alt="Capa de A Hard Day's Night com mosaico de fotos dos Beatles" width="140" />
+                    <figcaption>A Hard Day’s Night (absoluto)</figcaption>
+                  </figure>
+                </td>
+                <td>Trilha sonora do filme homônimo.</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </section>
+
+    <article id="beatles" aria-labelledby="titulo-beatles">
+      <div class="wrap">
+        <h2 id="titulo-beatles">The Beatles — Visão Geral</h2>
+        <p>Os Beatles foram uma banda britânica formada em Liverpool, composta por John Lennon, Paul McCartney, George Harrison e Ringo Starr. Tornaram-se um fenômeno cultural global na década de 1960.</p>
+        <p>Combinando inovação musical, técnica de estúdio e composições memoráveis, influenciaram diversos gêneros e redefiniram a indústria fonográfica, do <i>rock</i> à música pop.</p>
+        <p>Seus álbuns exploraram arranjos orquestrais, experimentação sonora e letras marcantes, deixando um legado que atravessa gerações.</p>
+
+        <figure>
+          <img src="img/beatles-palco.jpg" alt="Os Beatles tocando no palco diante de um público entusiasmado" width="720" />
+          <figcaption>Apresentação ao vivo dos Beatles (figura com legenda descritiva).</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <section id="caminhos" aria-labelledby="titulo-caminhos">
+      <div class="wrap">
+        <h2 id="titulo-caminhos">Caminhos Relativos x Absolutos</h2>
+        <p>
+          Um <b>caminho relativo</b> aponta para um recurso em relação ao arquivo atual (ex.: <code>img/foto.jpg</code>), enquanto um
+          <b>caminho absoluto</b> inclui o endereço completo do recurso (ex.: <code>https://exemplo.com/imagens/foto.jpg</code>).
+          Em links, um relativo poderia ser <i>sobre.html</i>, e um absoluto poderia ser <i>https://pt.wikipedia.org/</i>.
+          Dica: em fórmulas químicas, o uso de <b>H<sub>2</sub>O</b> mostra a marcação com <code>&lt;sub&gt;</code>.
+        </p>
+
+        <h3>Exemplos</h3>
+        <ul>
+          <li><b>Imagem (relativo):</b> <code>img/beatles-studio.jpg</code></li>
+          <li><b>Imagem (absoluto):</b> <code>https://upload.wikimedia.org/wikipedia/commons/2/20/The_Fabs.JPG</code></li>
+          <li><b>Link (relativo):</b> <a href="sobre.html">sobre.html</a></li>
+          <li><b>Link (absoluto):</b> <a href="https://pt.wikipedia.org/" target="_blank" rel="noopener">https://pt.wikipedia.org/</a></li>
+        </ul>
+
+        <p>
+          <b>Resumo:</b> use caminhos relativos para recursos dentro do seu projeto; use caminhos absolutos para recursos externos ou quando precisar da URL completa.
+        </p>
+      </div>
+    </section>
+
+    <aside class="wrap" aria-label="Atalho de navegação">
+      <p><a href="#topo">Voltar ao topo</a></p>
+    </aside>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrap">
+      <p>&copy; 2025 Leonardo — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

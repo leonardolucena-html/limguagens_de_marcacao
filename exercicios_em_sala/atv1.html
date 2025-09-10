@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1 </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#listas">Listas</a>
+            <a href="#imagens">Imagens</a>
+            <a href="#tabelas">Tabelas</a>
+            <a href="./sobre.html">Sobre</a>
+            <a href="https://www.google.com">Google</a>
+            <a href="./beatles/index.html">beatles</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="listas">
+            <h2>Listas</h2>
+            <h3>Lista Ordenada</h3>
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2
+                    <ol>
+                        <li>Subitem 2.1</li>
+                        <li>Subitem 2.2</li>
+                    </ol>
+                </li>
+                <li>Item 3</li>
+            </ol>
+
+            <h3>Lista Não Ordenada</h3>
+            <ul>
+                <li>Item A</li>
+                <li>Item B
+                    <ul>
+                        <li>Subitem B.1</li>
+                        <li>Subitem B.2</li>
+                    </ul>
+                </li>
+                <li>Item C</li>
+            </ul>
+
+            <h3>Lista de Definições</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Linguagem de Marcação de Hipertexto</dd>
+                <dt>CSS</dt>
+                <dd>Folhas de Estilo em Cascata</dd>
+                <dt>JavaScript</dt>
+                <dd>Linguagem de Programação para Web</dd>
+            </dl>
+        </section>
+
+        <section id="imagens">
+            <h2>Imagens</h2>
+           <figure>
+                <img  src="./imagens/img.jpg" width="30%" alt="Fundo do escritório">
+                <img src="https://t.ctcdn.com.br/lvns56iaSMyHvyTur4JeYS_NYeY=/i606944.png" width="30%" alt="Imagem de Exemplo do google">
+                <figcaption>Imagens de Exemplo</figcaption>
+            </figure>
+        </section>
+
+        <section id="tabelas">
+            <h2>Tabelas</h2>
+            <table border="1">
+                <caption>Exemplo de tabela</caption>
+                <tr>
+                    <td>Brasil:</td>
+                    <td>1.741.528 (2014)</td>
+                    <td>SC:</td>
+                    <td>67.325 (2014)</td>
+                </tr>
+                <tr>
+                    <td>Novas matrículas: Brasil</td>
+                    <td>11,7% (2014)</td>
+                    <td>SC:</td>
+                    <td>3,1% (2014).</td>
+                </tr>
+            </table>
+
+            <article aria-labelledby="titulo-ideb" style="margin-top: 24px;">
+          <h3 id="titulo-ideb">Tabela avançada — IDEB (2013 / 2015 / 2017)</h3>
+          
+          <table border="1" width="100%" cellpadding="8" cellspacing="0" aria-describedby="nota-ideb">
+            <caption>Índice de Desenvolvimento da Educação Básica (IDEB)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Etapa</th>
+                <th scope="col">Brasil 2013</th>
+                <th scope="col">Brasil 2015</th>
+                <th scope="col">Brasil 2017</th>
+                <th scope="col">SC 2013</th>
+                <th scope="col">SC 2015</th>
+                <th scope="col">SC 2017</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Anos iniciais</th>
+                <td>4,7</td>
+                <td>5,2</td>
+                <td>5,5</td>
+                <td>5,5</td>
+                <td>5,8</td>
+                <td>6,0</td>
+              </tr>
+              <tr>
+                <th scope="row">Anos finais</th>
+                <td>4,4</td>
+                <td>4,7</td>
+                <td>5,0</td>
+                <td>5,1</td>
+                <td>5,5</td>
+                <td>5,7</td>
+              </tr>
+              <tr>
+                <th scope="row">Ensino médio</th>
+                <td>3,9</td>
+                <td>4,3</td>
+                <td>4,7</td>
+                <td>4,4</td>
+                <td>4,7</td>
+                <td>5,2</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="nota-ideb" class="sr-only">Tabela com dados do IDEB para Brasil e Santa Catarina nos anos de 2013, 2015 e 2017.</p>
+        </article>
+        </section>
+
+        <section id="cd_banda">
+            <table border="1">
+                <thead>
+                        <th>Album</th>
+                        <th>Ano</th>
+                        <th>Gravadora</th>
+                        <th>Capa</th>
+                        <th>Observações</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Album 1</td>
+                        <td>2020</td>
+                        <td>Gravadora 1</td>
+                        <td><img  src="./imagens/img.jpg" width="30%" alt="Fundo do escritório"></td>
+                        <td>Observações sobre o Album 1</td>
+                    </tr>
+                    <tr>
+                        <td>Album 2</td>
+                        <td>2021</td>
+                        <td>Gravadora 2</td>
+                        <td><img src="https://t.ctcdn.com.br/lvns56iaSMyHvyTur4JeYS_NYeY=/i606944.png" width="30%" alt="Capa do Album 2"></td>
+                        <td>Observações sobre o Album 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer></footer>
+</body>
+</html>
